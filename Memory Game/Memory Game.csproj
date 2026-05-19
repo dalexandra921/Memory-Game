@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>Memory_Game</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Cards\board.jpg" />
+    <None Remove="Assets\Cards\card-back.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Cards\board.jpg" />
+    <Resource Include="Assets\Cards\card-back.png" />
+  </ItemGroup>
+
+</Project>
