@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Alexandra Dumitrescu\Desktop\Facultate\AN 2\sem 2\MSOA\Memory Game\obj\Debug\net8.0-windows\
+C:\Users\Alexandra Dumitrescu\Documents\GitHub\Memory-Game\Memory Game\obj\Debug\net8.0-windows\
 Memory_Game
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
-C:\Users\Alexandra Dumitrescu\Desktop\Facultate\AN 2\sem 2\MSOA\Memory Game\App.xaml
-2-1626185270
+C:\Users\Alexandra Dumitrescu\Documents\GitHub\Memory-Game\Memory Game\App.xaml
+41072356404
 
-7-72906700
+9792379093
 198717675157
-MainWindow.xaml;Views\IntroScreen.xaml;
+Controls\CardControl.xaml;MainWindow.xaml;Views\GameScreen.xaml;Views\IntroScreen.xaml;
 
 False
 

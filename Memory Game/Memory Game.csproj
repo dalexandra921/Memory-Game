@@ -12,11 +12,59 @@
   <ItemGroup>
     <None Remove="Assets\Cards\board.jpg" />
     <None Remove="Assets\Cards\card-back.png" />
+    <None Remove="Assets\Cards\card1.png" />
+    <None Remove="Assets\Cards\card10.png" />
+    <None Remove="Assets\Cards\card11.png" />
+    <None Remove="Assets\Cards\card12.png" />
+    <None Remove="Assets\Cards\card13.png" />
+    <None Remove="Assets\Cards\card14.png" />
+    <None Remove="Assets\Cards\card15.png" />
+    <None Remove="Assets\Cards\card16.png" />
+    <None Remove="Assets\Cards\card17.png" />
+    <None Remove="Assets\Cards\card18.png" />
+    <None Remove="Assets\Cards\card19.jpg" />
+    <None Remove="Assets\Cards\card19.png" />
+    <None Remove="Assets\Cards\card2.png" />
+    <None Remove="Assets\Cards\card20.png" />
+    <None Remove="Assets\Cards\card3.png" />
+    <None Remove="Assets\Cards\card4.png" />
+    <None Remove="Assets\Cards\card5.png" />
+    <None Remove="Assets\Cards\card6.png" />
+    <None Remove="Assets\Cards\card7.png" />
+    <None Remove="Assets\Cards\card8.png" />
+    <None Remove="Assets\Cards\card9.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Cards\card11.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Cards\card10.png" />
+    <Resource Include="Assets\Cards\card12.png" />
+    <Resource Include="Assets\Cards\card13.png" />
+    <Resource Include="Assets\Cards\card14.png" />
+    <Resource Include="Assets\Cards\card15.png" />
+    <Resource Include="Assets\Cards\card16.png" />
+    <Resource Include="Assets\Cards\card17.png" />
+    <Resource Include="Assets\Cards\card18.png" />
+    <Resource Include="Assets\Cards\card19.jpg" />
+    <Resource Include="Assets\Cards\card19.png" />
+    <Resource Include="Assets\Cards\card20.png" />
+    <Resource Include="Assets\Cards\card4.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Assets\Cards\board.jpg" />
     <Resource Include="Assets\Cards\card-back.png" />
+    <Resource Include="Assets\Cards\card1.png" />
+    <Resource Include="Assets\Cards\card2.png" />
+    <Resource Include="Assets\Cards\card3.png" />
+    <Resource Include="Assets\Cards\card5.png" />
+    <Resource Include="Assets\Cards\card6.png" />
+    <Resource Include="Assets\Cards\card7.png" />
+    <Resource Include="Assets\Cards\card8.png" />
+    <Resource Include="Assets\Cards\card9.png" />
   </ItemGroup>
 
 </Project>

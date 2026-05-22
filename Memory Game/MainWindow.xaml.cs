@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using Memory_Game.Views;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -19,6 +20,20 @@ namespace Memory_Game
         public MainWindow()
         {
             InitializeComponent();
+            MainContainer.Children.Add(new IntroScreen(this));
+        }
+        public void ShowGameScreen()
+        {
+            MainContainer.Children.Clear();
+
+            MainContainer.Children.Add(new GameScreen());
+        }
+
+        public void ShowIntroScreen()
+        {
+            MainContainer.Children.Clear();
+
+            MainContainer.Children.Add(new IntroScreen(this));
         }
     }
 }

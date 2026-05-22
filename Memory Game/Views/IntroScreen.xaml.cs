@@ -20,9 +20,18 @@ namespace Memory_Game.Views
     /// </summary>
     public partial class IntroScreen : UserControl
     {
-        public IntroScreen()
+        private MainWindow mainWindow;
+
+        public IntroScreen(MainWindow window)
         {
             InitializeComponent();
+
+            mainWindow = window;
+        }
+
+        private void StartButton_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            mainWindow.ShowGameScreen();
         }
     }
 }
