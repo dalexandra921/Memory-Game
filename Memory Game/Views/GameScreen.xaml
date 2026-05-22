@@ -1,0 +1,82 @@
+﻿<UserControl x:Class="Memory_Game.Views.GameScreen"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:controls="clr-namespace:Memory_Game.Controls">
+
+    <Grid Background="#111">
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+
+        <!-- HEADER -->
+        <Border Grid.Row="0"
+                Background="#1b1b1b">
+
+            <Grid Margin="20">
+
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+
+                </Grid.ColumnDefinitions>
+
+                <!-- SCORE -->
+                <TextBlock
+                    x:Name="ScoreText"
+                    Text="Score: 0"
+                    FontSize="28"
+                    Foreground="White"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Left"/>
+
+                <!-- TIMER -->
+                <TextBlock
+                    x:Name="TimerText"
+                    Grid.Column="1"
+                    Text="Time: 00:00"
+                    FontSize="28"
+                    Foreground="White"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"/>
+
+                <!-- MUTARI -->
+                <TextBlock
+                    x:Name="MovesText"
+                    Grid.Column="1"
+                    Margin="0,40,0,0"
+                    Text="Moves: 0"
+                    FontSize="18"
+                    Foreground="Gray"
+                    HorizontalAlignment="Center"/>
+
+                <!-- RESTART -->
+                <Button
+                    Grid.Column="2"
+                    Content="New Game"
+                    Width="120"
+                    Height="45"
+                    HorizontalAlignment="Right"
+                    Click="NewGame_Click"/>
+
+            </Grid>
+
+        </Border>
+
+        <!-- BOARD -->
+        <UniformGrid
+            x:Name="GameBoard"
+            Grid.Row="1"
+            Rows="4"
+            Columns="4"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"/>
+
+    </Grid>
+
+</UserControl>
