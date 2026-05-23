@@ -20,10 +20,18 @@
         </Button.Template>
 
         <Image
-            x:Name="CardImage"
-            Source="/Assets/Cards/card-back.png"
-            Width="180"
-            Stretch="Uniform"/>
+    x:Name="CardImage"
+    Source="/Assets/Cards/card-back.png"
+    Stretch="Uniform"
+    RenderTransformOrigin="0.5,0.5">
+
+            <Image.RenderTransform>
+
+                <ScaleTransform x:Name="CardScale"/>
+
+            </Image.RenderTransform>
+
+        </Image>
 
     </Button>
 

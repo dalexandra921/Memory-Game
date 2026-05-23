@@ -8,7 +8,6 @@ C:\Users\Alexandra Dumitrescu\Documents\GitHub\Memory-Game\Memory Game\obj\Debug
 C:\Users\Alexandra Dumitrescu\Documents\GitHub\Memory-Game\Memory Game\obj\Debug\net8.0-windows\Views\GameScreen.g.cs
 C:\Users\Alexandra Dumitrescu\Documents\GitHub\Memory-Game\Memory Game\obj\Debug\net8.0-windows\Views\IntroScreen.g.cs
 C:\Users\Alexandra Dumitrescu\Documents\GitHub\Memory-Game\Memory Game\obj\Debug\net8.0-windows\App.g.cs
-C:\Users\Alexandra Dumitrescu\Documents\GitHub\Memory-Game\Memory Game\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Users\Alexandra Dumitrescu\Documents\GitHub\Memory-Game\Memory Game\obj\Debug\net8.0-windows\Memory Game_MarkupCompile.cache
 C:\Users\Alexandra Dumitrescu\Documents\GitHub\Memory-Game\Memory Game\obj\Debug\net8.0-windows\Memory Game_MarkupCompile.lref
 C:\Users\Alexandra Dumitrescu\Documents\GitHub\Memory-Game\Memory Game\obj\Debug\net8.0-windows\MainWindow.baml

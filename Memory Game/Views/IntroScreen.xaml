@@ -5,12 +5,13 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Memory_Game.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="800" d:DesignWidth="800">
-    
-    <Grid Background="#111"> <!-- permite randuri,coloane,layering -->
+             d:DesignHeight="900" d:DesignWidth="1200">
 
-        <Grid Width="800"
-              Height="800"
+    <Grid Background="#111">
+        <!-- permite randuri,coloane,layering -->
+
+        <Grid Width="1200"
+              Height="900"
               HorizontalAlignment="Center"
               VerticalAlignment="Center">
 
@@ -41,9 +42,11 @@
 
             <!-- dreapta sus -->
             <Border Grid.Row="0"  
-                    Grid.Column="1"> <!-- tine fiecare panel- animate separat -->
+                    Grid.Column="1">
+                <!-- tine fiecare panel- animate separat -->
 
-                <Border.Background> <!-- backgroung cu imagineBrush -->
+                <Border.Background>
+                    <!-- backgroung cu imagineBrush -->
                     <ImageBrush
                         ImageSource="/Assets/Cards/board.jpg"
                         Viewbox="0.5,0,0.5,0.5"
@@ -82,6 +85,65 @@
             </Border>
 
         </Grid>
+
+
+        <StackPanel
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+
+            <TextBlock
+                Text="SELECT DIFFICULTY"
+                FontSize="30"
+                FontWeight="Bold"
+                Foreground="White"
+                TextAlignment="Center"
+                HorizontalAlignment="Center"
+                Margin="0,0,0,20" Background="#FF110000" Width="400"/>
+
+            <StackPanel
+                Orientation="Horizontal"
+                HorizontalAlignment="Center">
+
+                <Button
+                    x:Name="EasyButton"
+                    Content="EASY"
+                    FontSize="20"
+                    Width="120"
+                    Height="50"
+                    Margin="10"
+                    Click="EasyButton_Click" Background="#FFE6E2A3"/>
+
+                <Button
+                    x:Name="MediumButton"
+                    Content="MEDIUM"
+                    FontSize="20"
+                    Width="120"
+                    Height="50"
+                    Margin="10"
+                    Click="MediumButton_Click" Background="#FFCFE6A3"/>
+
+                <Button
+                    x:Name="HardButton"
+                    Content="HARD"
+                    FontSize="20"
+                    Width="120"
+                    Height="50"
+                    Margin="10"
+                    Click="HardButton_Click" Background="#FFE6A5A3"/>
+
+            </StackPanel>
+
+        </StackPanel>
+
+        <Button
+            Content="START GAME"
+            FontSize="25"
+            Width="220"
+            Height="70"
+            Click="StartButton_Click" 
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Margin="0,220,0,0" Background="#FFA5CDE8"/>
 
     </Grid>
 </UserControl>

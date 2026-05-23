@@ -22,18 +22,18 @@ namespace Memory_Game
             InitializeComponent();
             MainContainer.Children.Add(new IntroScreen(this));
         }
-        public void ShowGameScreen()
+
+        public void ShowGameScreen(int rows, int columns)
         {
             MainContainer.Children.Clear();
-
-            MainContainer.Children.Add(new GameScreen());
+            MainContainer.Children.Add( new GameScreen(rows, columns));
         }
 
         public void ShowIntroScreen()
         {
             MainContainer.Children.Clear();
-
             MainContainer.Children.Add(new IntroScreen(this));
         }
+
     }
 }

@@ -3,9 +3,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:views="clr-namespace:Memory_Game.Views"
         Title="Memory Game"
-        Height="800"
-        Width="1100">
+        Width="1200"
+        Height="900"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Background="#111">
 
-    <Grid x:Name="MainContainer"/>
+     <Grid x:Name="MainContainer"/>
 
 </Window>

@@ -22,7 +22,6 @@
     <None Remove="Assets\Cards\card16.png" />
     <None Remove="Assets\Cards\card17.png" />
     <None Remove="Assets\Cards\card18.png" />
-    <None Remove="Assets\Cards\card19.jpg" />
     <None Remove="Assets\Cards\card19.png" />
     <None Remove="Assets\Cards\card2.png" />
     <None Remove="Assets\Cards\card20.png" />
@@ -48,7 +47,6 @@
     <Resource Include="Assets\Cards\card16.png" />
     <Resource Include="Assets\Cards\card17.png" />
     <Resource Include="Assets\Cards\card18.png" />
-    <Resource Include="Assets\Cards\card19.jpg" />
     <Resource Include="Assets\Cards\card19.png" />
     <Resource Include="Assets\Cards\card20.png" />
     <Resource Include="Assets\Cards\card4.png" />

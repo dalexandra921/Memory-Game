@@ -26,13 +26,18 @@ namespace Memory_Game.Views
         private DispatcherTimer timer = new();
         private int seconds = 0;
         private bool timerStarted = false;
+        private int rows;
+        private int columns;
 
-        public GameScreen()
+        public GameScreen(int rows, int columns)
         {
             InitializeComponent();
-            CreateCards();
+           
             timer.Interval = TimeSpan.FromSeconds(1);
             timer.Tick += Timer_Tick;
+            this.rows = rows;
+            this.columns = columns;
+            CreateCards();
         }
 
         private void CreateCards()
@@ -63,7 +68,9 @@ namespace Memory_Game.Views
             };
 
             Random random = new();
-            int totalCards = 16;
+            GameBoard.Rows = rows;
+            GameBoard.Columns = columns;
+            int totalCards = rows * columns;
             int pairsNeeded = totalCards / 2;
 
             List<string> selectedCards = allCards
@@ -89,11 +96,8 @@ namespace Memory_Game.Views
         private void Timer_Tick(object? sender, EventArgs e)
         {
             seconds++;
-
             int mins = seconds / 60;
-
             int secs = seconds % 60;
-
             TimerText.Text = $"Time: {mins:00}:{secs:00}";
         }
 
@@ -150,7 +154,6 @@ namespace Memory_Game.Views
             }
 
             selectedCards.Clear();
-
             canPlay = true;
         }
 
@@ -180,9 +183,7 @@ namespace Memory_Game.Views
         private void ResetGame()
         {
             GameBoard.Children.Clear();
-
             selectedCards.Clear();
-
             canPlay = true;
 
             score = 0;
@@ -190,13 +191,10 @@ namespace Memory_Game.Views
             seconds = 0;
 
             timer.Stop();
-
             timerStarted = false;
 
             ScoreText.Text = "Score: 0";
-
             MovesText.Text = "Moves: 0";
-
             TimerText.Text = "Time: 00:00";
 
             CreateCards();
@@ -205,6 +203,12 @@ namespace Memory_Game.Views
         private void NewGame_Click(object sender, RoutedEventArgs e)
         {
             ResetGame();
+        }
+
+        private void MainMenu_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = (MainWindow)Window.GetWindow(this);
+            mainWindow.ShowIntroScreen();
         }
 
     }

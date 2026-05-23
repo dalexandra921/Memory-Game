@@ -3,80 +3,109 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:controls="clr-namespace:Memory_Game.Controls">
 
-    <Grid Background="#111">
+    <Grid>
 
-        <Grid.RowDefinitions>
+        <!-- BACKGROUND IMAGE -->
 
-            <RowDefinition Height="100"/>
-            <RowDefinition/>
+        <Image
+        Source="/Assets/Cards/board.jpg"
+        Stretch="UniformToFill"
+        Opacity="0.25"/>
 
-        </Grid.RowDefinitions>
+        <!-- DARK OVERLAY -->
 
-        <!-- HEADER -->
-        <Border Grid.Row="0"
-                Background="#1b1b1b">
+        <Border Background="#AA000000"/>
 
-            <Grid Margin="20">
+        <!-- MAIN CONTENT -->
+
+        <Grid Margin="30">
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="Auto"/>
+
+                <RowDefinition Height="*"/>
+
+            </Grid.RowDefinitions>
+
+            <!-- HEADER -->
+
+            <Grid Grid.Row="0"
+              Margin="0,0,0,30">
 
                 <Grid.ColumnDefinitions>
 
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition/>
+
+                    <ColumnDefinition/>
+
+                    <ColumnDefinition/>
 
                 </Grid.ColumnDefinitions>
 
-                <!-- SCORE -->
                 <TextBlock
-                    x:Name="ScoreText"
-                    Text="Score: 0"
-                    FontSize="28"
-                    Foreground="White"
-                    VerticalAlignment="Center"
-                    HorizontalAlignment="Left"/>
+                x:Name="ScoreText"
+                Text="Score: 0"
+                FontSize="28"
+                Foreground="White"
+                VerticalAlignment="Center"/>
 
-                <!-- TIMER -->
-                <TextBlock
+                <StackPanel
+                Grid.Column="1"
+                HorizontalAlignment="Center">
+
+                    <TextBlock
                     x:Name="TimerText"
-                    Grid.Column="1"
                     Text="Time: 00:00"
                     FontSize="28"
                     Foreground="White"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"/>
-
-                <!-- MUTARI -->
-                <TextBlock
-                    x:Name="MovesText"
-                    Grid.Column="1"
-                    Margin="0,40,0,0"
-                    Text="Moves: 0"
-                    FontSize="18"
-                    Foreground="Gray"
                     HorizontalAlignment="Center"/>
 
-                <!-- RESTART -->
-                <Button
+                    <TextBlock
+                    x:Name="MovesText"
+                    Text="Moves: 0"
+                    FontSize="18"
+                    Foreground="LightGray"
+                    HorizontalAlignment="Center"/>
+                </StackPanel>
+
+                <StackPanel
                     Grid.Column="2"
-                    Content="New Game"
-                    Width="120"
-                    Height="45"
-                    HorizontalAlignment="Right"
-                    Click="NewGame_Click"/>
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+
+                    <Button
+                        Content="Main Menu"
+                        Width="140"
+                        FontSize="23"
+                        Height="50"
+                        Margin="0,0,15,0"
+                        Click="MainMenu_Click" Background="#FFBDD282"/>
+
+                    <Button
+                        Content="New Game"
+                        FontSize="23"
+                        Width="140"
+                        Height="50"
+                        Click="NewGame_Click" Background="#FF6FD26A"/>
+
+                </StackPanel>
 
             </Grid>
 
-        </Border>
+            <!-- CARDS -->
 
-        <!-- BOARD -->
-        <UniformGrid
+            <UniformGrid
             x:Name="GameBoard"
             Grid.Row="1"
             Rows="4"
-            Columns="4"
+            Columns="5"
             HorizontalAlignment="Center"
-            VerticalAlignment="Center"/>
+            VerticalAlignment="Center"
+            MaxWidth="900"
+            MaxHeight="700"/>
+
+        </Grid>
 
     </Grid>
-
 </UserControl>
