@@ -4,14 +4,10 @@
 
     <Grid>
 
-        <!-- BACKGROUND -->
-
         <Image
         Source="/Assets/Cards/board.jpg"
         Stretch="Fill"
         Opacity="0.25"/>
-
-        <!-- DARK OVERLAY -->
 
         <Border Background="#22000000"/>
 
@@ -46,7 +42,6 @@
 
         </StackPanel>
     
-
     </Grid>
-
+    
 </UserControl>

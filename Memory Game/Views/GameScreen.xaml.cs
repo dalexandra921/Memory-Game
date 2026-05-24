@@ -17,6 +17,7 @@ using System.Windows.Threading;
 using Memory_Game.Models;
 using System.IO;
 using System.Text.Json;
+using Memory_Game.Models;
 
 namespace Memory_Game.Views
 {
@@ -24,13 +25,13 @@ namespace Memory_Game.Views
     {
         private List<CardControl> selectedCards = new();
         private bool canPlay = true;
-        private int moves = 0;
-        private int score = 0;
         private DispatcherTimer timer = new();
         private int seconds = 0;
         private bool timerStarted = false;
         private int rows;
         private int columns;
+
+        private Joc jocCurent = new();
 
         public GameScreen(int rows, int columns)
         {
@@ -88,11 +89,21 @@ namespace Memory_Game.Views
 
             foreach (string image in gameCards)
             {
-                CardControl card = new();
+                CardControl cardControl = new(); //componenta vizuala a cartii
 
-                card.FrontImage = image;
-                card.CardButton.Click += Card_Click;
-                GameBoard.Children.Add(card);
+                Carte carte = new() //datele cartii efective
+                {
+                    id = jocCurent.listaCarti.Count + 1,
+                    simbol = image,
+                    esteGasita = false,
+                    esteIntoarsa = false
+                };
+
+                cardControl.CardData = carte;
+
+                jocCurent.listaCarti.Add(carte);
+                cardControl.CardButton.Click += Card_Click;
+                GameBoard.Children.Add(cardControl);
             }
         }
 
@@ -115,45 +126,43 @@ namespace Memory_Game.Views
             }
 
             Button clickedButton = (Button)sender;
-
             CardControl clickedCard = (CardControl)clickedButton.Parent;
 
-            if (clickedCard.IsFlipped() || clickedCard.IsMatched)
-                return;
-            clickedCard.Flip();
+            if (clickedCard.IsFlipped() || clickedCard.CardData.esteGasita) return;
 
+            clickedCard.Flip();
             selectedCards.Add(clickedCard);
 
             if (selectedCards.Count == 2)
             {
-                moves++;
-                MovesText.Text = $"Moves: {moves}";
+                jocCurent.mutari++;
+                MovesText.Text = $"Moves: {jocCurent.mutari}";
                 canPlay = false;
                 await CheckMatch();
             }
         }
         private async Task CheckMatch() //asteapta sa se termine verificarea
         {
-            CardControl first = selectedCards[0];
-            CardControl second = selectedCards[1];
+            CardControl firstCard = selectedCards[0];
+            CardControl secondCard = selectedCards[1];
 
-            if (first.FrontImage == second.FrontImage)
+            if (firstCard.CardData.simbol == secondCard.CardData.simbol)
             {
-                first.IsMatched = true;
-                second.IsMatched = true;
+                firstCard.CardData.esteGasita = true;
+                secondCard.CardData.esteGasita = true;
 
-                score += 10;
-                ScoreText.Text = $"Score: {score}";
+                jocCurent.scor += 10;
+                ScoreText.Text = $"Score: {jocCurent.scor}";
                 CheckWin();
             }
             else
             {
-                score -= 2;
-                ScoreText.Text = $"Score: {score}";
+                jocCurent.scor -= 2;
+                ScoreText.Text = $"Score: {jocCurent.scor}";
 
                 await Task.Delay(1500);
-                first.Hide();
-                second.Hide();
+                firstCard.Hide();
+                secondCard.Hide();
             }
 
             selectedCards.Clear();
@@ -166,7 +175,7 @@ namespace Memory_Game.Views
 
             foreach (CardControl card in GameBoard.Children)
             {
-                if (!card.IsMatched)
+                if (!card.CardData.esteGasita)
                 {
                     allMatched = false;
                     break;
@@ -181,8 +190,8 @@ namespace Memory_Game.Views
 
                 MessageBox.Show(
                     $"Congratulations, {mainWindow.CurrentPlayer}!" +
-                    $"\n\nScore: {score}" +
-                    $"\nMoves: {moves}" +
+                    $"\n\nScore: {jocCurent.scor}" +
+                    $"\nMoves: {jocCurent.mutari}" +
                     $"\nTime: {TimerText.Text}",
                     "Victory"
                 );
@@ -195,8 +204,8 @@ namespace Memory_Game.Views
             selectedCards.Clear();
             canPlay = true;
 
-            score = 0;
-            moves = 0;
+            jocCurent.scor = 0;
+            jocCurent.mutari = 0;
             seconds = 0;
 
             timer.Stop();
@@ -254,7 +263,7 @@ namespace Memory_Game.Views
                 difficulty = "Hard";
             }
 
-            int rankedScore = score * multiplier;
+            int rankedScore = jocCurent.scor * multiplier;
 
             Player existingPlayer =
                 players.FirstOrDefault(p => p.Username == username);
@@ -264,7 +273,7 @@ namespace Memory_Game.Views
                 existingPlayer = new Player
                 {
                     Username = username,
-                    BestScore = score,
+                    BestScore = jocCurent.scor,
                     RankedScore = rankedScore,
                     Difficulty = difficulty,
                     GamesPlayed = 1,
@@ -281,7 +290,7 @@ namespace Memory_Game.Views
                 
                 if (rankedScore > existingPlayer.RankedScore)
                 {
-                    existingPlayer.BestScore = score;
+                    existingPlayer.BestScore = jocCurent.scor;
                     existingPlayer.RankedScore = rankedScore;
                     existingPlayer.Difficulty = difficulty;
                 }

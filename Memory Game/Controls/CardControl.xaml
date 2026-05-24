@@ -12,7 +12,7 @@
         <Button.Template>
 
             <ControlTemplate TargetType="Button">
-
+                
                 <ContentPresenter/>
 
             </ControlTemplate>
@@ -20,10 +20,10 @@
         </Button.Template>
 
         <Image
-    x:Name="CardImage"
-    Source="/Assets/Cards/card-back.png"
-    Stretch="Uniform"
-    RenderTransformOrigin="0.5,0.5">
+            x:Name="CardImage"
+            Source="/Assets/Cards/card-back.png"
+            Stretch="Uniform"
+            RenderTransformOrigin="0.5,0.5">
 
             <Image.RenderTransform>
 

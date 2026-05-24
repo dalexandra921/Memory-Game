@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Alexandra Dumitrescu\\Documents\\GitHub\\Memory-Game\\Memory Game\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F2578E7B-256D-44B7-80C4-1F763C698DEA}|Memory Game.csproj|c:\\users\\alexandra dumitrescu\\documents\\github\\memory-game\\memory game\\views\\leaderboardscreen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F2578E7B-256D-44B7-80C4-1F763C698DEA}|Memory Game.csproj|solutionrelative:views\\leaderboardscreen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F2578E7B-256D-44B7-80C4-1F763C698DEA}|Memory Game.csproj|c:\\users\\alexandra dumitrescu\\documents\\github\\memory-game\\memory game\\views\\gamescreen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F2578E7B-256D-44B7-80C4-1F763C698DEA}|Memory Game.csproj|solutionrelative:views\\gamescreen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -22,7 +26,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "players.json",
               "DocumentMoniker": "C:\\Users\\Alexandra Dumitrescu\\Documents\\GitHub\\Memory-Game\\Memory Game\\bin\\Debug\\net8.0-windows\\players.json",
               "RelativeDocumentMoniker": "bin\\Debug\\net8.0-windows\\players.json",
@@ -37,6 +41,18 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "LeaderboardScreen.xaml",
+              "DocumentMoniker": "C:\\Users\\Alexandra Dumitrescu\\Documents\\GitHub\\Memory-Game\\Memory Game\\Views\\LeaderboardScreen.xaml",
+              "RelativeDocumentMoniker": "Views\\LeaderboardScreen.xaml",
+              "ToolTip": "C:\\Users\\Alexandra Dumitrescu\\Documents\\GitHub\\Memory-Game\\Memory Game\\Views\\LeaderboardScreen.xaml*",
+              "RelativeToolTip": "Views\\LeaderboardScreen.xaml*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-24T11:14:23.841Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "GameScreen.xaml",
               "DocumentMoniker": "C:\\Users\\Alexandra Dumitrescu\\Documents\\GitHub\\Memory-Game\\Memory Game\\Views\\GameScreen.xaml",
               "RelativeDocumentMoniker": "Views\\GameScreen.xaml",

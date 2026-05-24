@@ -2,32 +2,24 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:controls="clr-namespace:Memory_Game.Controls">
-
+    
     <Grid>
 
-        <!-- BACKGROUND -->
-
         <Image
-        Source="/Assets/Cards/board.jpg"
-        Stretch="Fill"
-        Opacity="0.25"/>
-
-        <!-- DARK OVERLAY -->
+            Source="/Assets/Cards/board.jpg"
+            Stretch="Fill"
+            Opacity="0.25"/>
 
         <Border Background="#22000000"/>
-        <!-- MAIN CONTENT -->
-
+        
         <Grid Margin="30">
 
             <Grid.RowDefinitions>
-
+                
                 <RowDefinition Height="Auto"/>
-
                 <RowDefinition Height="*"/>
-
+                
             </Grid.RowDefinitions>
-
-            <!-- HEADER -->
 
             <Grid Grid.Row="0"
               Margin="0,0,0,30">
@@ -35,37 +27,36 @@
                 <Grid.ColumnDefinitions>
 
                     <ColumnDefinition/>
-
                     <ColumnDefinition/>
-
                     <ColumnDefinition/>
 
                 </Grid.ColumnDefinitions>
 
                 <TextBlock
-                x:Name="ScoreText"
-                Text="Score: 0"
-                FontSize="28"
-                Foreground="White"
-                VerticalAlignment="Center"/>
-
-                <StackPanel
-                Grid.Column="1"
-                HorizontalAlignment="Center">
-
-                    <TextBlock
-                    x:Name="TimerText"
-                    Text="Time: 00:00"
+                    x:Name="ScoreText"
+                    Text="Score: 0"
                     FontSize="28"
                     Foreground="White"
-                    HorizontalAlignment="Center"/>
+                    VerticalAlignment="Center"/>
+
+                <StackPanel
+                    Grid.Column="1"
+                    HorizontalAlignment="Center">
 
                     <TextBlock
-                    x:Name="MovesText"
-                    Text="Moves: 0"
-                    FontSize="18"
-                    Foreground="LightGray"
-                    HorizontalAlignment="Center"/>
+                        x:Name="TimerText"
+                        Text="Time: 00:00"
+                        FontSize="28"
+                        Foreground="White"
+                        HorizontalAlignment="Center"/>
+
+                    <TextBlock
+                        x:Name="MovesText"
+                        Text="Moves: 0"
+                        FontSize="18"
+                        Foreground="LightGray"
+                        HorizontalAlignment="Center"/>
+                    
                 </StackPanel>
 
                 <StackPanel
@@ -79,30 +70,31 @@
                         FontSize="23"
                         Height="50"
                         Margin="0,0,15,0"
-                        Click="MainMenu_Click" Background="#FFBDD282"/>
+                        Click="MainMenu_Click" 
+                        Background="#FFBDD282"/>
 
                     <Button
                         Content="New Game"
                         FontSize="23"
                         Width="140"
                         Height="50"
-                        Click="NewGame_Click" Background="#FF6FD26A"/>
+                        Click="NewGame_Click" 
+                        Background="#FF6FD26A"/>
 
                 </StackPanel>
 
             </Grid>
 
             <!-- CARDS -->
-
             <UniformGrid
-            x:Name="GameBoard"
-            Grid.Row="1"
-            Rows="4"
-            Columns="5"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            MaxWidth="900"
-            MaxHeight="700"/>
+                x:Name="GameBoard"
+                Grid.Row="1"
+                Rows="4"
+                Columns="5"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                MaxWidth="900"
+                MaxHeight="700"/>
 
         </Grid>
 

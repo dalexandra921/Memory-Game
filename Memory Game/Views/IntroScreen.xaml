@@ -16,13 +16,17 @@
 
             <!-- 2 randuri -->
             <Grid.RowDefinitions>
+                
                 <RowDefinition/>
                 <RowDefinition/>
+                
             </Grid.RowDefinitions>
-
+            
             <Grid.ColumnDefinitions>
+                
                 <ColumnDefinition/>
                 <ColumnDefinition/>
+                
             </Grid.ColumnDefinitions>
 
             <!-- stanga sus -->
@@ -149,7 +153,8 @@
                     Width="120"
                     Height="50"
                     Margin="10"
-                    Click="EasyButton_Click" Background="#FFE6E2A3"/>
+                    Click="EasyButton_Click" 
+                    Background="#FFE6E2A3"/>
 
                 <Button
                     x:Name="MediumButton"
@@ -158,7 +163,8 @@
                     Width="120"
                     Height="50"
                     Margin="10"
-                    Click="MediumButton_Click" Background="#FFCFE6A3"/>
+                    Click="MediumButton_Click" 
+                    Background="#FFCFE6A3"/>
 
                 <Button
                     x:Name="HardButton"
@@ -167,7 +173,8 @@
                     Width="120"
                     Height="50"
                     Margin="10"
-                    Click="HardButton_Click" Background="#FFE6A5A3"/>
+                    Click="HardButton_Click" 
+                    Background="#FFE6A5A3"/>
 
             </StackPanel>
 

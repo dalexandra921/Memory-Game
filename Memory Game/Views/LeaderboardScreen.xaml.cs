@@ -20,11 +20,9 @@ namespace Memory_Game.Views
         private void LoadLeaderboard()
         {
             string path = "players.json";
-
             if (!File.Exists(path)) return;
 
             string json = File.ReadAllText(path);
-
             List<Player> players = JsonSerializer.Deserialize<List<Player>>(json);
 
             var sortedPlayers = players
@@ -69,7 +67,6 @@ namespace Memory_Game.Views
                 TextBlock title = new()
                 {
                     Text = $"#{rank}   {player.Username}   -   {player.RankedScore} pts ({player.Difficulty})",
-
                     FontSize = 28,
                     FontWeight = FontWeights.Bold,
                     Foreground = System.Windows.Media.Brushes.White

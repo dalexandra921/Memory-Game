@@ -2,24 +2,14 @@
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
 using System.Windows.Media.Animation;
+using Memory_Game.Models;
 
 namespace Memory_Game.Controls
 {
     public partial class CardControl : UserControl
     {
-        private bool isFlipped = false;
-
-        public bool IsMatched { get; set; }
-
-        public string FrontImage { get; set; }
-
-        public Button CardButtonControl
-        {
-            get
-            {
-                return CardButton;
-            }
-        }
+        public Carte CardData { get; set; }
+        public Button CardButtonControl{get{return CardButton;}}
 
         public CardControl()
         {
@@ -28,8 +18,7 @@ namespace Memory_Game.Controls
 
         public void Flip()
         {
-            if (isFlipped) return;
-
+            if (CardData.esteIntoarsa) return;
             DoubleAnimation hideAnimation = new()
             {
                 To = 0,
@@ -38,9 +27,7 @@ namespace Memory_Game.Controls
 
             hideAnimation.Completed += (s, e) =>
             {
-                CardImage.Source = new BitmapImage(
-                    new Uri(FrontImage, UriKind.Relative)
-                );
+                CardImage.Source = new BitmapImage(new Uri(CardData.simbol, UriKind.Relative));
 
                 DoubleAnimation showAnimation = new()
                 {
@@ -48,18 +35,11 @@ namespace Memory_Game.Controls
                     Duration = TimeSpan.FromMilliseconds(120)
                 };
 
-                CardScale.BeginAnimation(
-                    System.Windows.Media.ScaleTransform.ScaleXProperty,
-                    showAnimation
-                );
+                CardScale.BeginAnimation(System.Windows.Media.ScaleTransform.ScaleXProperty,showAnimation);
             };
 
-            CardScale.BeginAnimation(
-                System.Windows.Media.ScaleTransform.ScaleXProperty,
-                hideAnimation
-            );
-
-            isFlipped = true;
+            CardScale.BeginAnimation(System.Windows.Media.ScaleTransform.ScaleXProperty,hideAnimation);
+            CardData.esteIntoarsa = true;
         }
 
         public void Hide()
@@ -72,9 +52,7 @@ namespace Memory_Game.Controls
 
             hideAnimation.Completed += (s, e) =>
             {
-                CardImage.Source = new BitmapImage(
-                    new Uri("/Assets/Cards/card-back.png", UriKind.Relative)
-                );
+                CardImage.Source = new BitmapImage(new Uri("/Assets/Cards/card-back.png", UriKind.Relative));
 
                 DoubleAnimation showAnimation = new()
                 {
@@ -82,23 +60,16 @@ namespace Memory_Game.Controls
                     Duration = TimeSpan.FromMilliseconds(120)
                 };
 
-                CardScale.BeginAnimation(
-                    System.Windows.Media.ScaleTransform.ScaleXProperty,
-                    showAnimation
-                );
+                CardScale.BeginAnimation(System.Windows.Media.ScaleTransform.ScaleXProperty,showAnimation);
             };
 
-            CardScale.BeginAnimation(
-                System.Windows.Media.ScaleTransform.ScaleXProperty,
-                hideAnimation
-            );
-
-            isFlipped = false;
+            CardScale.BeginAnimation(System.Windows.Media.ScaleTransform.ScaleXProperty,hideAnimation);
+            CardData.esteIntoarsa = false;
         }
 
         public bool IsFlipped()
         {
-            return isFlipped;
+            return CardData.esteIntoarsa;
         }
     }
 }

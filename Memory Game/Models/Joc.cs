@@ -8,9 +8,9 @@ namespace Memory_Game.Models
 {
     public class Joc
     {
-        public List<Carte> ListaCarti { get; set; }
-        public int Scor { get; set; }
-        public int Mutari { get; set; }
-        public int TimpJoc { get; set; }
+        public List<Carte> listaCarti { get; set; }
+        public int scor { get; set; }
+        public int mutari { get; set; }
+        public int timpJoc { get; set; }
     }
 }
