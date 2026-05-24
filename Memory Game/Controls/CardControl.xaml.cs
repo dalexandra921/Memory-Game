@@ -10,7 +10,6 @@ namespace Memory_Game.Controls
     {
         public Carte CardData { get; set; }
         public Button CardButtonControl{get{return CardButton;}}
-
         public CardControl()
         {
             InitializeComponent();

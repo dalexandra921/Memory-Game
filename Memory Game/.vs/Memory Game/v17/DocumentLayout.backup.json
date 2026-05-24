@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Alexandra Dumitrescu\\Documents\\GitHub\\Memory-Game\\Memory Game\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F2578E7B-256D-44B7-80C4-1F763C698DEA}|Memory Game.csproj|c:\\users\\alexandra dumitrescu\\documents\\github\\memory-game\\memory game\\views\\leaderboardscreen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F2578E7B-256D-44B7-80C4-1F763C698DEA}|Memory Game.csproj|solutionrelative:views\\leaderboardscreen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{F2578E7B-256D-44B7-80C4-1F763C698DEA}|Memory Game.csproj|c:\\users\\alexandra dumitrescu\\documents\\github\\memory-game\\memory game\\models\\joc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2578E7B-256D-44B7-80C4-1F763C698DEA}|Memory Game.csproj|solutionrelative:models\\joc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F2578E7B-256D-44B7-80C4-1F763C698DEA}|Memory Game.csproj|c:\\users\\alexandra dumitrescu\\documents\\github\\memory-game\\memory game\\views\\gamescreen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F2578E7B-256D-44B7-80C4-1F763C698DEA}|Memory Game.csproj|solutionrelative:views\\gamescreen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{F2578E7B-256D-44B7-80C4-1F763C698DEA}|Memory Game.csproj|c:\\users\\alexandra dumitrescu\\documents\\github\\memory-game\\memory game\\views\\gamescreen.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2578E7B-256D-44B7-80C4-1F763C698DEA}|Memory Game.csproj|solutionrelative:views\\gamescreen.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Alexandra Dumitrescu\\Documents\\GitHub\\Memory-Game\\Memory Game\\bin\\Debug\\net8.0-windows\\players.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:bin\\Debug\\net8.0-windows\\players.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{F2578E7B-256D-44B7-80C4-1F763C698DEA}|Memory Game.csproj|c:\\users\\alexandra dumitrescu\\documents\\github\\memory-game\\memory game\\views\\introscreen.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2578E7B-256D-44B7-80C4-1F763C698DEA}|Memory Game.csproj|solutionrelative:views\\introscreen.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,44 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "players.json",
-              "DocumentMoniker": "C:\\Users\\Alexandra Dumitrescu\\Documents\\GitHub\\Memory-Game\\Memory Game\\bin\\Debug\\net8.0-windows\\players.json",
-              "RelativeDocumentMoniker": "bin\\Debug\\net8.0-windows\\players.json",
-              "ToolTip": "C:\\Users\\Alexandra Dumitrescu\\Documents\\GitHub\\Memory-Game\\Memory Game\\bin\\Debug\\net8.0-windows\\players.json",
-              "RelativeToolTip": "bin\\Debug\\net8.0-windows\\players.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-05-24T09:50:23.469Z",
-              "IsPinned": true,
+              "DocumentIndex": 0,
+              "Title": "Joc.cs",
+              "DocumentMoniker": "C:\\Users\\Alexandra Dumitrescu\\Documents\\GitHub\\Memory-Game\\Memory Game\\Models\\Joc.cs",
+              "RelativeDocumentMoniker": "Models\\Joc.cs",
+              "ToolTip": "C:\\Users\\Alexandra Dumitrescu\\Documents\\GitHub\\Memory-Game\\Memory Game\\Models\\Joc.cs",
+              "RelativeToolTip": "Models\\Joc.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T17:36:06.868Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LeaderboardScreen.xaml",
-              "DocumentMoniker": "C:\\Users\\Alexandra Dumitrescu\\Documents\\GitHub\\Memory-Game\\Memory Game\\Views\\LeaderboardScreen.xaml",
-              "RelativeDocumentMoniker": "Views\\LeaderboardScreen.xaml",
-              "ToolTip": "C:\\Users\\Alexandra Dumitrescu\\Documents\\GitHub\\Memory-Game\\Memory Game\\Views\\LeaderboardScreen.xaml*",
-              "RelativeToolTip": "Views\\LeaderboardScreen.xaml*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-24T11:14:23.841Z",
+              "DocumentIndex": 2,
+              "Title": "IntroScreen.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Alexandra Dumitrescu\\Documents\\GitHub\\Memory-Game\\Memory Game\\Views\\IntroScreen.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\IntroScreen.xaml.cs",
+              "ToolTip": "C:\\Users\\Alexandra Dumitrescu\\Documents\\GitHub\\Memory-Game\\Memory Game\\Views\\IntroScreen.xaml.cs",
+              "RelativeToolTip": "Views\\IntroScreen.xaml.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T17:32:59.491Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "GameScreen.xaml",
-              "DocumentMoniker": "C:\\Users\\Alexandra Dumitrescu\\Documents\\GitHub\\Memory-Game\\Memory Game\\Views\\GameScreen.xaml",
-              "RelativeDocumentMoniker": "Views\\GameScreen.xaml",
-              "ToolTip": "C:\\Users\\Alexandra Dumitrescu\\Documents\\GitHub\\Memory-Game\\Memory Game\\Views\\GameScreen.xaml",
-              "RelativeToolTip": "Views\\GameScreen.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-24T11:05:33.406Z",
+              "Title": "GameScreen.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Alexandra Dumitrescu\\Documents\\GitHub\\Memory-Game\\Memory Game\\Views\\GameScreen.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\GameScreen.xaml.cs",
+              "ToolTip": "C:\\Users\\Alexandra Dumitrescu\\Documents\\GitHub\\Memory-Game\\Memory Game\\Views\\GameScreen.xaml.cs",
+              "RelativeToolTip": "Views\\GameScreen.xaml.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAEwFIAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T17:32:37.328Z",
               "EditorCaption": ""
             }
           ]

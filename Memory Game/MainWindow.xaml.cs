@@ -18,6 +18,7 @@ namespace Memory_Game
     public partial class MainWindow : Window
     {
         public string CurrentPlayer { get; set; } = "Player";
+
         public MainWindow()
         {
             InitializeComponent();
@@ -27,7 +28,7 @@ namespace Memory_Game
         public void ShowGameScreen(int rows, int columns)
         {
             MainContainer.Children.Clear();
-            MainContainer.Children.Add( new GameScreen(rows, columns));
+            MainContainer.Children.Add(new GameScreen(rows, columns));
         }
 
         public void ShowIntroScreen()
@@ -39,7 +40,7 @@ namespace Memory_Game
         public void ShowLeaderboardScreen()
         {
             MainContainer.Children.Clear();
-            MainContainer.Children.Add(new LeaderboardScreen());
+            MainContainer.Children.Add(new LeaderboardScreen(this));
         }
 
     }

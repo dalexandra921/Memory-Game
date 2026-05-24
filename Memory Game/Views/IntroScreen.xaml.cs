@@ -32,10 +32,21 @@ namespace Memory_Game.Views
             HighlightSelectedButton(EasyButton);
         }
 
-        private void StartButton_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void StartButton_Click(object sender, RoutedEventArgs e)
         {
-            mainWindow.ShowGameScreen( selectedRows, selectedColumns);
-            mainWindow.CurrentPlayer = UsernameBox.Text;
+            try
+            {
+                mainWindow.CurrentPlayer = UsernameBox.Text;
+
+                mainWindow.ShowGameScreen(
+                    selectedRows,
+                    selectedColumns
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void HighlightSelectedButton(Button selectedButton)

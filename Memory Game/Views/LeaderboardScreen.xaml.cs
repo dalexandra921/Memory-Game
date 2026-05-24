@@ -11,9 +11,11 @@ namespace Memory_Game.Views
 {
     public partial class LeaderboardScreen : UserControl
     {
-        public LeaderboardScreen()
+        private MainWindow mainWindow;
+        public LeaderboardScreen(MainWindow window)
         {
             InitializeComponent();
+            mainWindow = window;
             LoadLeaderboard();
         }
 
@@ -23,7 +25,10 @@ namespace Memory_Game.Views
             if (!File.Exists(path)) return;
 
             string json = File.ReadAllText(path);
-            List<Player> players = JsonSerializer.Deserialize<List<Player>>(json);
+
+            List<Player> players =
+                JsonSerializer.Deserialize<List<Player>>(json)
+                ?? new List<Player>();
 
             var sortedPlayers = players
                 .OrderByDescending(p => p.RankedScore)
@@ -94,7 +99,6 @@ namespace Memory_Game.Views
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow mainWindow = (MainWindow)Window.GetWindow(this);
             mainWindow.ShowIntroScreen();
         }
     }

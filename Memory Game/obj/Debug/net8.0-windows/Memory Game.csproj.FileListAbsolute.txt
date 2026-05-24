@@ -3,14 +3,19 @@ C:\Users\Alexandra Dumitrescu\Documents\GitHub\Memory-Game\Memory Game\bin\Debug
 C:\Users\Alexandra Dumitrescu\Documents\GitHub\Memory-Game\Memory Game\bin\Debug\net8.0-windows\Memory Game.runtimeconfig.json
 C:\Users\Alexandra Dumitrescu\Documents\GitHub\Memory-Game\Memory Game\bin\Debug\net8.0-windows\Memory Game.dll
 C:\Users\Alexandra Dumitrescu\Documents\GitHub\Memory-Game\Memory Game\bin\Debug\net8.0-windows\Memory Game.pdb
-C:\Users\Alexandra Dumitrescu\Documents\GitHub\Memory-Game\Memory Game\obj\Debug\net8.0-windows\Views\GameScreen.baml
+C:\Users\Alexandra Dumitrescu\Documents\GitHub\Memory-Game\Memory Game\obj\Debug\net8.0-windows\Controls\CardControl.baml
+C:\Users\Alexandra Dumitrescu\Documents\GitHub\Memory-Game\Memory Game\obj\Debug\net8.0-windows\Views\LeaderboardScreen.baml
+C:\Users\Alexandra Dumitrescu\Documents\GitHub\Memory-Game\Memory Game\obj\Debug\net8.0-windows\Controls\CardControl.g.cs
 C:\Users\Alexandra Dumitrescu\Documents\GitHub\Memory-Game\Memory Game\obj\Debug\net8.0-windows\MainWindow.g.cs
 C:\Users\Alexandra Dumitrescu\Documents\GitHub\Memory-Game\Memory Game\obj\Debug\net8.0-windows\Views\GameScreen.g.cs
 C:\Users\Alexandra Dumitrescu\Documents\GitHub\Memory-Game\Memory Game\obj\Debug\net8.0-windows\Views\IntroScreen.g.cs
+C:\Users\Alexandra Dumitrescu\Documents\GitHub\Memory-Game\Memory Game\obj\Debug\net8.0-windows\Views\LeaderboardScreen.g.cs
 C:\Users\Alexandra Dumitrescu\Documents\GitHub\Memory-Game\Memory Game\obj\Debug\net8.0-windows\App.g.cs
 C:\Users\Alexandra Dumitrescu\Documents\GitHub\Memory-Game\Memory Game\obj\Debug\net8.0-windows\Memory Game_MarkupCompile.cache
 C:\Users\Alexandra Dumitrescu\Documents\GitHub\Memory-Game\Memory Game\obj\Debug\net8.0-windows\Memory Game_MarkupCompile.lref
+C:\Users\Alexandra Dumitrescu\Documents\GitHub\Memory-Game\Memory Game\obj\Debug\net8.0-windows\App.baml
 C:\Users\Alexandra Dumitrescu\Documents\GitHub\Memory-Game\Memory Game\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\Alexandra Dumitrescu\Documents\GitHub\Memory-Game\Memory Game\obj\Debug\net8.0-windows\Views\GameScreen.baml
 C:\Users\Alexandra Dumitrescu\Documents\GitHub\Memory-Game\Memory Game\obj\Debug\net8.0-windows\Views\IntroScreen.baml
 C:\Users\Alexandra Dumitrescu\Documents\GitHub\Memory-Game\Memory Game\obj\Debug\net8.0-windows\Memory Game.g.resources
 C:\Users\Alexandra Dumitrescu\Documents\GitHub\Memory-Game\Memory Game\obj\Debug\net8.0-windows\Memory Game.GeneratedMSBuildEditorConfig.editorconfig
@@ -23,8 +28,3 @@ C:\Users\Alexandra Dumitrescu\Documents\GitHub\Memory-Game\Memory Game\obj\Debug
 C:\Users\Alexandra Dumitrescu\Documents\GitHub\Memory-Game\Memory Game\obj\Debug\net8.0-windows\Memory Game.pdb
 C:\Users\Alexandra Dumitrescu\Documents\GitHub\Memory-Game\Memory Game\obj\Debug\net8.0-windows\Memory Game.genruntimeconfig.cache
 C:\Users\Alexandra Dumitrescu\Documents\GitHub\Memory-Game\Memory Game\obj\Debug\net8.0-windows\ref\Memory Game.dll
-C:\Users\Alexandra Dumitrescu\Documents\GitHub\Memory-Game\Memory Game\obj\Debug\net8.0-windows\Controls\CardControl.baml
-C:\Users\Alexandra Dumitrescu\Documents\GitHub\Memory-Game\Memory Game\obj\Debug\net8.0-windows\Controls\CardControl.g.cs
-C:\Users\Alexandra Dumitrescu\Documents\GitHub\Memory-Game\Memory Game\obj\Debug\net8.0-windows\Views\LeaderboardScreen.baml
-C:\Users\Alexandra Dumitrescu\Documents\GitHub\Memory-Game\Memory Game\obj\Debug\net8.0-windows\Views\LeaderboardScreen.g.cs
-C:\Users\Alexandra Dumitrescu\Documents\GitHub\Memory-Game\Memory Game\obj\Debug\net8.0-windows\App.baml

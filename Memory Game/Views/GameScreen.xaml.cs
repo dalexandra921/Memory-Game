@@ -1,17 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using Memory_Game.Controls;
 using System.Windows.Threading;
 using Memory_Game.Models;
@@ -102,6 +91,7 @@ namespace Memory_Game.Views
                 cardControl.CardData = carte;
 
                 jocCurent.listaCarti.Add(carte);
+                cardControl.CardButton.Tag = cardControl;
                 cardControl.CardButton.Click += Card_Click;
                 GameBoard.Children.Add(cardControl);
             }
@@ -126,7 +116,8 @@ namespace Memory_Game.Views
             }
 
             Button clickedButton = (Button)sender;
-            CardControl clickedCard = (CardControl)clickedButton.Parent;
+            CardControl clickedCard =
+                (CardControl)clickedButton.Tag;
 
             if (clickedCard.IsFlipped() || clickedCard.CardData.esteGasita) return;
 
@@ -244,7 +235,8 @@ namespace Memory_Game.Views
                 string json = File.ReadAllText(path);
                 if (!string.IsNullOrWhiteSpace(json))
                 {
-                    players = JsonSerializer.Deserialize<List<Player>>(json);
+                    players = JsonSerializer.Deserialize<List<Player>>(json)
+                                ?? new List<Player>();
                 }
             }
 
