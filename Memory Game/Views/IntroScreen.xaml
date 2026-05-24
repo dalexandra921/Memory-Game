@@ -7,8 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="900" d:DesignWidth="1200">
 
-    <Grid Background="#111">
-        <!-- permite randuri,coloane,layering -->
+    <Grid Background="#111">  <!-- permite randuri,coloane,layering -->
 
         <Grid Width="1200"
               Height="900"
@@ -92,13 +91,52 @@
             VerticalAlignment="Center">
 
             <TextBlock
-                Text="SELECT DIFFICULTY"
+                Text="Write your name:"
                 FontSize="30"
-                FontWeight="Bold"
-                Foreground="White"
+                Foreground="Black"
                 TextAlignment="Center"
                 HorizontalAlignment="Center"
-                Margin="0,0,0,20" Background="#FF110000" Width="400"/>
+                Margin="0,0,0,20" 
+                Background="White" 
+                Width="230"/>
+
+            <Border
+                Width="400"
+                Height="45"
+                CornerRadius="18"
+                Background="#FFD8C1ED"
+                Margin="0,0,0,30">
+
+                <TextBox
+                    x:Name="UsernameBox"
+                    FontSize="25"
+                    Text="Player"
+                    BorderThickness="0"
+                    Background="Transparent"
+                    TextAlignment="Center"
+                    VerticalAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Padding="10,0"/>
+
+            </Border>
+
+            <Border
+                Background="#FF110000"
+                CornerRadius="20"
+                Width="400"
+                Padding="10"
+                Margin="0,0,0,20">
+
+                <TextBlock
+                    Text="SELECT DIFFICULTY"
+                    FontSize="30"
+                    FontWeight="Bold"
+                    Foreground="White"
+                    TextAlignment="Center"
+                    HorizontalAlignment="Center"/>
+
+            </Border>
+
 
             <StackPanel
                 Orientation="Horizontal"
@@ -143,7 +181,19 @@
             Click="StartButton_Click" 
             VerticalAlignment="Center"
             HorizontalAlignment="Center"
-            Margin="0,220,0,0" Background="#FFA5CDE8"/>
+            Margin="0,400,0,0"
+            Background="#FFA5CDE8"/>
+
+        <Button
+            Content="LEADERBOARD"
+            FontSize="25"
+            Width="220"
+            Height="70"
+            Click="Leaderboard_Click" 
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Margin="0,600,0,0"
+            Background="#FFF3D4B5"/>
 
     </Grid>
 </UserControl>

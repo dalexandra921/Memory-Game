@@ -28,12 +28,14 @@ namespace Memory_Game.Views
         {
             InitializeComponent();
             mainWindow = window;
+            UsernameBox.Text = mainWindow.CurrentPlayer;
             HighlightSelectedButton(EasyButton);
         }
 
         private void StartButton_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             mainWindow.ShowGameScreen( selectedRows, selectedColumns);
+            mainWindow.CurrentPlayer = UsernameBox.Text;
         }
 
         private void HighlightSelectedButton(Button selectedButton)
@@ -64,5 +66,11 @@ namespace Memory_Game.Views
             selectedColumns = 8;
             HighlightSelectedButton(HardButton);
         }
+
+        private void Leaderboard_Click(object sender, RoutedEventArgs e)
+        {
+            mainWindow.ShowLeaderboardScreen();
+        }
+
     }
 }

@@ -14,6 +14,9 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Memory_Game.Controls;
 using System.Windows.Threading;
+using Memory_Game.Models;
+using System.IO;
+using System.Text.Json;
 
 namespace Memory_Game.Views
 {
@@ -173,9 +176,15 @@ namespace Memory_Game.Views
             if (allMatched)
             {
                 timer.Stop();
+                SavePlayerStats();
+                MainWindow mainWindow =(MainWindow)Window.GetWindow(this);
+
                 MessageBox.Show(
-                    $"You won!\n\nScore: {score}\nMoves: {moves}\n" +
-                    $"{TimerText.Text}","Victory"
+                    $"Congratulations, {mainWindow.CurrentPlayer}!" +
+                    $"\n\nScore: {score}" +
+                    $"\nMoves: {moves}" +
+                    $"\nTime: {TimerText.Text}",
+                    "Victory"
                 );
             }
         }
@@ -209,6 +218,85 @@ namespace Memory_Game.Views
         {
             MainWindow mainWindow = (MainWindow)Window.GetWindow(this);
             mainWindow.ShowIntroScreen();
+        }
+
+        private void SavePlayerStats()
+        {
+            MainWindow mainWindow =
+                (MainWindow)Window.GetWindow(this);
+
+            string username = mainWindow.CurrentPlayer;
+            string path = "players.json";
+
+            List<Player> players = new();
+
+            if (File.Exists(path))
+            {
+                string json = File.ReadAllText(path);
+                if (!string.IsNullOrWhiteSpace(json))
+                {
+                    players = JsonSerializer.Deserialize<List<Player>>(json);
+                }
+            }
+
+            int multiplier = 1;
+            string difficulty = "Easy";
+
+            if (columns == 5)
+            {
+                multiplier = 2;
+                difficulty = "Medium";
+            }
+
+            if (columns == 8)
+            {
+                multiplier = 3;
+                difficulty = "Hard";
+            }
+
+            int rankedScore = score * multiplier;
+
+            Player existingPlayer =
+                players.FirstOrDefault(p => p.Username == username);
+
+            if (existingPlayer == null)
+            {
+                existingPlayer = new Player
+                {
+                    Username = username,
+                    BestScore = score,
+                    RankedScore = rankedScore,
+                    Difficulty = difficulty,
+                    GamesPlayed = 1,
+                    Wins = 1,
+                    BestTime = TimerText.Text
+                };
+
+                players.Add(existingPlayer);
+            }
+            else
+            {
+                existingPlayer.GamesPlayed++;
+                existingPlayer.Wins++;
+                
+                if (rankedScore > existingPlayer.RankedScore)
+                {
+                    existingPlayer.BestScore = score;
+                    existingPlayer.RankedScore = rankedScore;
+                    existingPlayer.Difficulty = difficulty;
+                }
+
+                existingPlayer.BestTime = TimerText.Text;
+            }
+
+            string updatedJson =
+                JsonSerializer.Serialize(players,
+                new JsonSerializerOptions
+                {
+                    WriteIndented = true
+                });
+
+            File.WriteAllText(path, updatedJson);
         }
 
     }

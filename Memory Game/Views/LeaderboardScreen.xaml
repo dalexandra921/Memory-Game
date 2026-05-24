@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="Memory_Game.Views.LeaderboardScreen"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Grid>
+
+        <!-- BACKGROUND -->
+
+        <Image
+        Source="/Assets/Cards/board.jpg"
+        Stretch="Fill"
+        Opacity="0.25"/>
+
+        <!-- DARK OVERLAY -->
+
+        <Border Background="#22000000"/>
+
+        <StackPanel
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+
+            <TextBlock
+                Text="LEADERBOARD"
+                FontSize="42"
+                FontWeight="Bold"
+                Foreground="White"
+                Margin="0,0,0,40"
+                HorizontalAlignment="Center"/>
+
+            <ScrollViewer
+                Height="550"
+                VerticalScrollBarVisibility="Auto">
+
+                <StackPanel
+                    x:Name="LeaderboardPanel"/>
+
+            </ScrollViewer>
+
+            <Button
+                Content="BACK"
+                Width="150"
+                Height="60"
+                FontSize="30"
+                Margin="0,30,0,0"
+                Click="Back_Click"/>
+
+        </StackPanel>
+    
+
+    </Grid>
+
+</UserControl>
